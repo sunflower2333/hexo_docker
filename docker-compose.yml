@@ -1,0 +1,12 @@
+services:
+  hexo-fluid:
+    container_name: my_hexo
+    build: .
+    image: hexo_fluid:1.0
+    restart: unless-stopped
+    volumes:
+      - ./docs:/Hexo
+    ports:
+      - 4000:4000
+    environment:
+      - TZ="Asia/Shanghai"
