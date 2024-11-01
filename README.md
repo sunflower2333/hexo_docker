@@ -14,6 +14,17 @@ or with old synax:
 sudo docker-compose up -d
 ```
 
+## Update
+- Pull this repo and update:
+```
+git pull
+cp -a docs docs_bak
+sudo docker compose down 
+sudo docker compose build
+sudo docker compose start
+sudo docker images rm id_of_old_image
+```
+
 ## Help
 - To enter the container and interact with `hexo`, please run:
 ```

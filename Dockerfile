@@ -21,6 +21,11 @@ VOLUME /Hexo
 # Expose server port
 EXPOSE 4000
 
+# Replace Timezone
+RUN echo "Asia/Shanghai" > /etc/timezone && \
+    rm /etc/localtime && \
+    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 # Install hexo
 RUN npm install -g npm && \
     npm install -g hexo-cli

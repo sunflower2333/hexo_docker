@@ -9,4 +9,4 @@ services:
     ports:
       - 4000:4000
     environment:
-      - TZ="Asia/Shanghai"
+      - TZ=Asia/Shanghai
